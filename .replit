@@ -11,6 +11,27 @@ env = { "CI" = "true" }
 [workflows]
 runButton = "Project"
 
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Elcomech Next.js Website"
+
+[[workflows.workflow]]
+name = "Elcomech Next.js Website"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd elcomech-nextjs && npm run dev -- -p 3000"
+waitForPort = 3000
+
+[workflows.workflow.metadata]
+outputType = "webview"
+
 [agent]
 stack = "PNPM_WORKSPACE"
 expertMode = true

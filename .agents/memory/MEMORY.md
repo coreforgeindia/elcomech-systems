@@ -1,0 +1,1 @@
+- [Next.js standalone site](nextjs-standalone-site.md) — elcomech-nextjs/ is a self-contained Next.js 14 Pages Router project (not a monorepo artifact); runs on port 3000 via "Elcomech Next.js Website" workflow.

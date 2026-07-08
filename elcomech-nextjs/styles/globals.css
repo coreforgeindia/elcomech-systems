@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ffffff;
+  color: #0A0A0A;
+}
+
+.bg-grid {
+  background-image: linear-gradient(#E8E8E8 1px, transparent 1px),
+    linear-gradient(to right, #E8E8E8 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f5f5f5; }
+::-webkit-scrollbar-thumb { background: #D40000; }
+::-webkit-scrollbar-thumb:hover { background: #B30000; }
