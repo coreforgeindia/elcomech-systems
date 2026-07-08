@@ -18,11 +18,11 @@ export default function Footer() {
         {/* Row 1 */}
         <div className="mb-16">
           <Link href="/" className="inline-flex items-center gap-3 group">
-            <div className="bg-white px-3 py-2 h-12 flex items-center justify-center rounded">
+            <div className="bg-white px-2 py-1 h-9 flex items-center justify-center rounded">
               <img
                 src="/logo-2.png"
                 alt="Elcomech Systems"
-                className="h-8 w-auto object-contain"
+                className="h-5 w-auto object-contain"
               />
             </div>
             <div className="flex flex-col leading-tight">
