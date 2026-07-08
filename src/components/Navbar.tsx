@@ -41,7 +41,7 @@ export default function Navbar() {
         {/* Logo - Anand Technologies style: icon + company name */}
         <Link href="/" className="flex items-center gap-3 select-none group">
           <img
-            src="/logo.png"
+            src="/logo-1.png"
             alt="Elcomech Systems"
             className="h-9 w-auto object-contain"
           />
