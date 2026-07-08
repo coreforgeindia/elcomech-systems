@@ -25,7 +25,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:site_name" content="Elcomech Systems" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/logo.png" />
+        <meta property="og:image" content="/logo-1.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="robots" content="index, follow" />
       </Head>

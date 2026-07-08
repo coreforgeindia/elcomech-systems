@@ -20,7 +20,7 @@ export default function Footer() {
           <Link href="/" className="inline-flex items-center gap-3 group">
             <div className="bg-white px-2 py-1 h-9 flex items-center justify-center rounded">
               <img
-                src="/logo.png"
+                src="/logo-2.png"
                 alt="Elcomech Systems"
                 className="h-6 w-auto object-contain"
               />
