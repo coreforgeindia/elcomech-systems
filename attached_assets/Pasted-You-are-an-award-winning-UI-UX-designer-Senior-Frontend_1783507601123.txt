@@ -1,0 +1,583 @@
+You are an award-winning UI/UX designer, Senior Frontend Architect, Motion Designer, and Full Stack Engineer.
+
+Your task is to build a COMPLETE production-ready website for an industrial engineering company named
+
+ELCOMECH SYSTEMS
+
+The website must look like a Fortune 500 engineering company, not a small business website.
+
+The design should be premium, modern, highly animated, minimal, luxurious and extremely professional.
+
+This website must outperform websites like
+
+https://anandtechnologies.co.in/
+
+Do NOT copy it.
+
+Instead create something significantly more premium.
+
+==================================================
+TECH STACK
+==================================================
+
+Use
+
+• Next.js 15 (App Router)
+• React 19
+• TypeScript
+• Tailwind CSS
+• Framer Motion
+• Shadcn UI
+• Lucide Icons
+• GSAP wherever required
+• React Hook Form
+• Zod Validation
+• Embla Carousel
+• Lenis Smooth Scroll
+• next/image
+• next/font
+• SEO Optimized
+• Fully Responsive
+• Dynamic Components
+• Reusable Components
+• Dark code architecture
+• Performance optimized
+• Lazy Loading
+• Suspense
+• Loading Skeletons
+• Metadata
+• OpenGraph
+• Sitemap
+• Robots.txt
+
+The project should follow proper folder architecture.
+
+==================================================
+COLOR PALETTE
+==================================================
+
+Primary Background
+
+White
+
+Primary Accent
+
+#D40000
+
+Secondary
+
+Black
+
+Use lots of whitespace.
+
+The entire website should feel modern, engineering focused and premium.
+
+No dark background.
+
+The entire website should primarily use white.
+
+Red should only be used for highlights.
+
+Black for headings.
+
+==================================================
+TYPOGRAPHY
+==================================================
+
+Use modern fonts.
+
+Bold Hero Typography
+
+Large Headlines
+
+Comfortable spacing
+
+Industrial look.
+
+==================================================
+NAVBAR
+==================================================
+
+Sticky Navbar
+
+Transparent initially
+
+White after scrolling
+
+Glass Morphism
+
+Logo Left
+
+Menu Right
+
+Navigation
+
+Home
+
+About Us
+
+Products & Services
+
+FAQ
+
+Contact Us
+
+CTA Button
+
+Get Quote
+
+Navbar should animate while scrolling.
+
+==================================================
+HERO SECTION
+==================================================
+
+Large Engineering Hero
+
+Huge Heading
+
+Industrial Background
+
+Animated Gradient
+
+Floating Engineering Shapes
+
+Subtle Grid Pattern
+
+Parallax Motion
+
+Headline
+
+Engineering Precision.
+Testing Excellence.
+
+Sub Heading
+
+Delivering high-quality electrical testing systems, RF shielding solutions, wiring harnesses, cable testing fixtures and industrial automation products engineered for reliability.
+
+CTA Buttons
+
+Explore Products
+
+Contact Us
+
+Statistics
+
+Years Experience
+
+Projects Delivered
+
+Industries Served
+
+Happy Clients
+
+Mouse Scroll Animation
+
+Background animations
+
+Smooth entrance animation
+
+==================================================
+ABOUT SECTION
+==================================================
+
+Beautiful split layout.
+
+Company overview.
+
+Animated counters.
+
+Mission
+
+Vision
+
+Core Values
+
+Timeline
+
+Why Choose Us
+
+Cards with animations.
+
+==================================================
+PRODUCTS & SERVICES
+==================================================
+
+Create ONE major section named
+
+Products & Services
+
+Inside this section dynamically load products from JSON.
+
+Each product should have
+
+Image
+
+Title
+
+Short Description
+
+Features
+
+Applications
+
+Specifications
+
+Gallery
+
+Enquiry Button
+
+Product Detail Modal
+
+OR
+
+Dedicated Product Page
+
+Products include
+
+• Resistive Load Bank
+
+• RF Shielded Enclosure
+
+• Cable Harness Test Fixture
+
+• Leak Testing Machine
+
+• Wire Marker
+
+• Wiring Harness
+
+• Testing Services
+
+• Cable Breakout
+
+• Cable Marker
+
+• PCB Test System
+
+The product descriptions, specifications, applications and technical information must be extracted from the provided HTML files.
+
+DO NOT create dummy descriptions.
+
+Read the uploaded HTML pages carefully and populate all product information dynamically.
+
+I will also provide
+
+photos.html
+
+Use those images for respective products.
+
+==================================================
+PRODUCT DETAILS
+==================================================
+
+Every product page should contain
+
+Hero Banner
+
+Image Gallery
+
+Overview
+
+Specifications
+
+Applications
+
+Industries
+
+Advantages
+
+Technical Details
+
+Related Products
+
+Sticky Enquiry Button
+
+Animated sections
+
+==================================================
+WHY CHOOSE US
+==================================================
+
+Beautiful animated cards
+
+Engineering Expertise
+
+Quality Assurance
+
+Reliable Products
+
+Customized Solutions
+
+Testing Facilities
+
+Customer Support
+
+==================================================
+PROCESS SECTION
+==================================================
+
+Design
+
+Development
+
+Testing
+
+Quality Inspection
+
+Delivery
+
+Animated timeline.
+
+==================================================
+INDUSTRIES WE SERVE
+==================================================
+
+Automotive
+
+Defence
+
+Electronics
+
+Telecommunications
+
+Medical
+
+Industrial Automation
+
+Aerospace
+
+Power Electronics
+
+Use animated icons.
+
+==================================================
+FAQ
+==================================================
+
+Beautiful accordion
+
+Smooth animations
+
+Common customer questions
+
+Expandable panels
+
+==================================================
+CONTACT SECTION
+==================================================
+
+Large Contact Section
+
+Left Side
+
+Company Details
+
+Phone
+
+Email
+
+Address
+
+Business Hours
+
+Right Side
+
+Beautiful Contact Form
+
+Name
+
+Email
+
+Phone
+
+Company
+
+Message
+
+Validation
+
+Success Animation
+
+Below Contact Form embed this Google Map
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.6806038101713!2d77.48868107409498!3d12.92823818738313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3fd7cfc20a0f%3A0xab1a1c6d4718c059!2sELCOMECH%20SYSTEMS!5e0!3m2!1sen!2sin!4v1783507262249!5m2!1sen!2sin"
+width="100%"
+height="500"
+style="border:0;"
+allowfullscreen=""
+loading="lazy"
+referrerpolicy="strict-origin-when-cross-origin">
+</iframe>
+
+==================================================
+FOOTER
+==================================================
+
+Premium Footer
+
+Company Info
+
+Quick Links
+
+Products
+
+Contact
+
+Social Icons
+
+Copyright
+
+Newsletter
+
+==================================================
+ANIMATIONS
+==================================================
+
+Use Framer Motion extensively.
+
+Page transitions
+
+Fade
+
+Slide
+
+Scale
+
+Parallax
+
+Scroll Reveal
+
+Hover Effects
+
+Magnetic Buttons
+
+Animated Cards
+
+Animated Counters
+
+Animated Background Shapes
+
+Image Zoom
+
+Floating Elements
+
+Smooth Scroll
+
+Everything should feel premium.
+
+==================================================
+SEO
+==================================================
+
+Complete Metadata
+
+Open Graph
+
+Twitter Cards
+
+Canonical URLs
+
+Structured Data
+
+Breadcrumb
+
+Sitemap
+
+Robots
+
+==================================================
+RESPONSIVENESS
+==================================================
+
+Perfect responsiveness
+
+Desktop
+
+Laptop
+
+Tablet
+
+Mobile
+
+No overflow
+
+No layout shift
+
+==================================================
+PERFORMANCE
+==================================================
+
+90+ Lighthouse Score
+
+Optimized Images
+
+Lazy Loading
+
+Code Splitting
+
+Dynamic Imports
+
+SEO Friendly
+
+==================================================
+CONTENT
+==================================================
+
+Use the uploaded HTML files as the primary source of truth.
+
+Extract:
+
+Product Descriptions
+
+Specifications
+
+Applications
+
+Features
+
+Technical Information
+
+Do NOT generate fake content.
+
+Generate JSON data from the HTML and render everything dynamically.
+
+If photos.html contains product images, automatically map them to the correct products.
+
+==================================================
+CODE QUALITY
+==================================================
+
+Use reusable components.
+
+No duplicated code.
+
+Proper hooks.
+
+Proper typing.
+
+Proper folder architecture.
+
+Maintainable code.
+
+Professional comments.
+
+==================================================
+FINAL OUTPUT
+==================================================
+
+Generate the COMPLETE production-ready Next.js project.
+
+No placeholders.
+
+No lorem ipsum.
+
+No dummy content.
+
+No missing pages.
+
+No unfinished components.
+
+Everything must be fully functional.
+
+The final result should look like a premium engineering company website worthy of an international industrial manufacturer.

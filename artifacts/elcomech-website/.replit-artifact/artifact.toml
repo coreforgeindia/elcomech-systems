@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "Elcomech Systems"
+version = "1.0.0"
+id = "artifacts/elcomech-website"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23194
+
+[services.development]
+run = "pnpm --filter @workspace/elcomech-website run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/elcomech-website", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/elcomech-website/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23194"
+BASE_PATH = "/"
