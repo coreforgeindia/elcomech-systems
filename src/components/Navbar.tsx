@@ -43,7 +43,7 @@ export default function Navbar() {
           <img
             src="/logo-1.png"
             alt="Elcomech Systems"
-            className="h-11 w-auto object-contain"
+            className="h-7 w-auto object-contain"
           />
           <div className="flex flex-col leading-tight">
             <span className="text-lg font-bold tracking-tight text-black">Elcomech</span>
