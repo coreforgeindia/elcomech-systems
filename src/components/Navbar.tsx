@@ -43,11 +43,11 @@ export default function Navbar() {
           <img
             src="/logo-1.png"
             alt="Elcomech Systems"
-            className="h-9 w-auto object-contain"
+            className="h-11 w-auto object-contain"
           />
           <div className="flex flex-col leading-tight">
             <span className="text-lg font-bold tracking-tight text-black">Elcomech</span>
-            <span className="text-[10px] font-semibold tracking-[0.2em] uppercase text-[#D40000]">Systems</span>
+            <span className="text-[10px] font-semibold tracking-[0.2em] uppercase text-[#0055D4]">Systems</span>
           </div>
         </Link>
 
@@ -57,25 +57,25 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className={`text-sm font-semibold tracking-wide transition-colors hover:text-[#D40000] relative ${
-                isActive(link.href) ? 'text-[#D40000]' : 'text-gray-800'
+              className={`text-sm font-semibold tracking-wide transition-colors hover:text-[#0055D4] relative ${
+                isActive(link.href) ? 'text-[#0055D4]' : 'text-gray-800'
               }`}
             >
               {link.name}
               {isActive(link.href) && (
                 <motion.div
                   layoutId="nav-indicator"
-                  className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#D40000]"
+                  className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#0055D4]"
                 />
               )}
             </Link>
           ))}
           <Link
             href="/get-quote"
-            className={`px-6 py-2 border-2 border-[#D40000] font-bold text-sm tracking-wide uppercase transition-all duration-300 ${
+            className={`px-6 py-2 border-2 border-[#0055D4] font-bold text-sm tracking-wide uppercase transition-all duration-300 ${
               router.pathname === '/get-quote'
-                ? 'bg-[#D40000] text-white'
-                : 'text-[#D40000] hover:bg-[#D40000] hover:text-white'
+                ? 'bg-[#0055D4] text-white'
+                : 'text-[#0055D4] hover:bg-[#0055D4] hover:text-white'
             }`}
           >
             Get Quote
@@ -107,7 +107,7 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   className={`text-left text-lg font-semibold py-3 border-b border-gray-100 transition-colors ${
-                    isActive(link.href) ? 'text-[#D40000]' : 'text-gray-800'
+                    isActive(link.href) ? 'text-[#0055D4]' : 'text-gray-800'
                   }`}
                 >
                   {link.name}
@@ -115,7 +115,7 @@ export default function Navbar() {
               ))}
               <Link
                 href="/get-quote"
-                className="mt-4 bg-[#D40000] text-white font-bold py-3 uppercase tracking-wide text-center"
+                className="mt-4 bg-[#0055D4] text-white font-bold py-3 uppercase tracking-wide text-center"
               >
                 Get Quote
               </Link>

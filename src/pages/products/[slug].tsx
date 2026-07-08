@@ -62,9 +62,9 @@ export default function ProductDetailPage({ product, related }: Props) {
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             {/* Breadcrumb */}
             <nav className="flex items-center gap-2 text-xs font-mono text-gray-400 uppercase tracking-widest mb-10">
-              <Link href="/" className="hover:text-[#D40000] transition-colors">Home</Link>
+              <Link href="/" className="hover:text-[#0055D4] transition-colors">Home</Link>
               <ChevronRight size={12} />
-              <Link href="/products" className="hover:text-[#D40000] transition-colors">Products</Link>
+              <Link href="/products" className="hover:text-[#0055D4] transition-colors">Products</Link>
               <ChevronRight size={12} />
               <span className="text-black font-bold">{product.name}</span>
             </nav>
@@ -79,10 +79,10 @@ export default function ProductDetailPage({ product, related }: Props) {
                   </span>
                   {product.gallery.length > 1 && (
                     <>
-                      <button onClick={scrollPrev} className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/90 border border-gray-200 flex items-center justify-center hover:border-[#D40000] transition-colors shadow-sm">
+                      <button onClick={scrollPrev} className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/90 border border-gray-200 flex items-center justify-center hover:border-[#0055D4] transition-colors shadow-sm">
                         <ArrowLeft size={16} />
                       </button>
-                      <button onClick={scrollNext} className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/90 border border-gray-200 flex items-center justify-center hover:border-[#D40000] transition-colors shadow-sm">
+                      <button onClick={scrollNext} className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/90 border border-gray-200 flex items-center justify-center hover:border-[#0055D4] transition-colors shadow-sm">
                         <ArrowRight size={16} />
                       </button>
                     </>
@@ -104,7 +104,7 @@ export default function ProductDetailPage({ product, related }: Props) {
                       <button
                         key={idx}
                         onClick={() => { emblaApi?.scrollTo(idx); setSelectedIndex(idx); }}
-                        className={`flex-shrink-0 w-16 h-16 border-2 overflow-hidden bg-gray-50 flex items-center justify-center p-2 transition-colors ${selectedIndex === idx ? 'border-[#D40000]' : 'border-gray-200 hover:border-gray-400'}`}
+                        className={`flex-shrink-0 w-16 h-16 border-2 overflow-hidden bg-gray-50 flex items-center justify-center p-2 transition-colors ${selectedIndex === idx ? 'border-[#0055D4]' : 'border-gray-200 hover:border-gray-400'}`}
                       >
                         <img src={img} alt="" className="w-full h-full object-contain mix-blend-multiply" />
                       </button>
@@ -116,11 +116,11 @@ export default function ProductDetailPage({ product, related }: Props) {
               {/* Info */}
               <div>
                 <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-                  <span className="inline-block font-mono text-[#D40000] uppercase tracking-widest text-xs mb-4 bg-red-50 px-3 py-1">
+                  <span className="inline-block font-mono text-[#0055D4] uppercase tracking-widest text-xs mb-4 bg-blue-50 px-3 py-1">
                     {product.category}
                   </span>
                   <h1 className="text-4xl md:text-5xl font-extrabold text-black mb-4 leading-tight">{product.name}</h1>
-                  <div className="w-12 h-1 bg-[#D40000] mb-6" />
+                  <div className="w-12 h-1 bg-[#0055D4] mb-6" />
                   <p className="text-gray-600 leading-relaxed mb-8 text-lg">{product.longDesc}</p>
 
                   {/* Specs */}
@@ -135,7 +135,7 @@ export default function ProductDetailPage({ product, related }: Props) {
 
                   {/* CTAs */}
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <Link href="/get-quote" className="flex-1 bg-[#D40000] text-white font-bold py-4 px-6 uppercase tracking-widest text-sm hover:bg-[#B30000] transition-colors text-center">
+                    <Link href="/get-quote" className="flex-1 bg-[#0055D4] text-white font-bold py-4 px-6 uppercase tracking-widest text-sm hover:bg-[#0044B3] transition-colors text-center">
                       Get Quote
                     </Link>
                     {product.hasFixtureWizard && (
@@ -159,7 +159,7 @@ export default function ProductDetailPage({ product, related }: Props) {
             {/* Key Features */}
             <motion.section className="mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <h2 className="text-3xl font-extrabold text-black mb-8 flex items-center gap-3">
-                <span className="w-8 h-1 bg-[#D40000] inline-block" />
+                <span className="w-8 h-1 bg-[#0055D4] inline-block" />
                 Key Features
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -170,9 +170,9 @@ export default function ProductDetailPage({ product, related }: Props) {
                       key={i}
                       initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
                       transition={{ delay: i * 0.08 }}
-                      className="flex gap-4 p-6 border border-gray-200 bg-white hover:border-[#D40000]/30 transition-colors group"
+                      className="flex gap-4 p-6 border border-gray-200 bg-white hover:border-[#0055D4]/30 transition-colors group"
                     >
-                      <CheckCircle2 size={20} className="text-[#D40000] shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                      <CheckCircle2 size={20} className="text-[#0055D4] shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
                       <div>
                         <span className="font-bold text-black">{title}</span>
                         {rest.length > 0 && <span className="text-gray-600">: {rest.join(':')}</span>}
@@ -187,13 +187,13 @@ export default function ProductDetailPage({ product, related }: Props) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
               <motion.section initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
                 <h2 className="text-2xl font-extrabold text-black mb-6 flex items-center gap-3">
-                  <span className="w-6 h-1 bg-[#D40000] inline-block" />
+                  <span className="w-6 h-1 bg-[#0055D4] inline-block" />
                   Applications
                 </h2>
                 <ul className="space-y-3">
                   {product.applications.map((app, i) => (
                     <li key={i} className="flex items-center gap-3 text-gray-700">
-                      <Zap size={14} className="text-[#D40000] shrink-0" />
+                      <Zap size={14} className="text-[#0055D4] shrink-0" />
                       <span className="font-medium">{app}</span>
                     </li>
                   ))}
@@ -202,12 +202,12 @@ export default function ProductDetailPage({ product, related }: Props) {
 
               <motion.section initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-20px' }}>
                 <h2 className="text-2xl font-extrabold text-black mb-6 flex items-center gap-3">
-                  <span className="w-6 h-1 bg-[#D40000] inline-block" />
+                  <span className="w-6 h-1 bg-[#0055D4] inline-block" />
                   Industries Served
                 </h2>
                 <div className="flex flex-wrap gap-2">
                   {product.industries.map((ind, i) => (
-                    <span key={i} className="px-4 py-2 bg-gray-100 border border-gray-200 text-sm font-semibold text-gray-700 hover:border-[#D40000] hover:text-[#D40000] transition-colors">
+                    <span key={i} className="px-4 py-2 bg-gray-100 border border-gray-200 text-sm font-semibold text-gray-700 hover:border-[#0055D4] hover:text-[#0055D4] transition-colors">
                       {ind}
                     </span>
                   ))}
@@ -222,7 +222,7 @@ export default function ProductDetailPage({ product, related }: Props) {
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               >
                 <div>
-                  <p className="font-mono text-[#D40000] uppercase tracking-widest text-sm mb-3">Fixture Project Process</p>
+                  <p className="font-mono text-[#0055D4] uppercase tracking-widest text-sm mb-3">Fixture Project Process</p>
                   <h3 className="text-3xl font-extrabold mb-3">Start Your ICT/FCT Fixture Project</h3>
                   <p className="text-gray-400 max-w-xl">
                     Our guided 7-step wizard collects all the technical information needed to design and manufacture your custom PCB test fixture, from Gerber files to fixture type selection and probe configuration.
@@ -230,7 +230,7 @@ export default function ProductDetailPage({ product, related }: Props) {
                 </div>
                 <button
                   onClick={() => setShowWizard(true)}
-                  className="flex-shrink-0 bg-[#D40000] text-white font-bold py-4 px-8 uppercase tracking-widest text-sm hover:bg-[#B30000] transition-colors flex items-center gap-2 whitespace-nowrap"
+                  className="flex-shrink-0 bg-[#0055D4] text-white font-bold py-4 px-8 uppercase tracking-widest text-sm hover:bg-[#0044B3] transition-colors flex items-center gap-2 whitespace-nowrap"
                 >
                   <PlayCircle size={18} /> Launch Wizard
                 </button>
@@ -241,7 +241,7 @@ export default function ProductDetailPage({ product, related }: Props) {
             {related.length > 0 && (
               <motion.section initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
                 <h2 className="text-3xl font-extrabold text-black mb-8 flex items-center gap-3">
-                  <span className="w-8 h-1 bg-[#D40000] inline-block" />
+                  <span className="w-8 h-1 bg-[#0055D4] inline-block" />
                   Related Products
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -258,11 +258,11 @@ export default function ProductDetailPage({ product, related }: Props) {
                         <span className="text-[10px] font-mono font-bold tracking-widest text-gray-400 uppercase mb-2">{p.category}</span>
                         <h3 className="text-base font-bold text-black mb-2">{p.name}</h3>
                         <p className="text-gray-600 text-xs mb-4 flex-grow leading-relaxed">{p.shortDesc}</p>
-                        <span className="inline-flex items-center gap-2 text-xs font-bold text-[#D40000] uppercase tracking-widest group/link">
+                        <span className="inline-flex items-center gap-2 text-xs font-bold text-[#0055D4] uppercase tracking-widest group/link">
                           View Details <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
                         </span>
                       </div>
-                      <div className="h-0.5 bg-transparent group-hover:bg-[#D40000] transition-colors" />
+                      <div className="h-0.5 bg-transparent group-hover:bg-[#0055D4] transition-colors" />
                     </Link>
                   ))}
                 </div>
@@ -271,7 +271,7 @@ export default function ProductDetailPage({ product, related }: Props) {
 
             {/* Back */}
             <div className="mt-16">
-              <Link href="/products" className="inline-flex items-center gap-2 text-sm font-bold text-gray-600 hover:text-[#D40000] transition-colors uppercase tracking-widest">
+              <Link href="/products" className="inline-flex items-center gap-2 text-sm font-bold text-gray-600 hover:text-[#0055D4] transition-colors uppercase tracking-widest">
                 <ArrowLeft size={16} /> Back to All Products
               </Link>
             </div>

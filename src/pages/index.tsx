@@ -22,7 +22,7 @@ function Hero() {
       <div className="absolute inset-0 bg-grid opacity-60 pointer-events-none" />
       {/* Geometric shapes */}
       <motion.div
-        className="absolute top-1/4 right-1/4 w-[40vw] h-[40vw] max-w-[600px] max-h-[600px] border border-[#D40000]/10 rounded-full pointer-events-none"
+        className="absolute top-1/4 right-1/4 w-[40vw] h-[40vw] max-w-[600px] max-h-[600px] border border-[#0055D4]/10 rounded-full pointer-events-none"
         animate={{ rotate: 360 }}
         transition={{ duration: 100, repeat: Infinity, ease: 'linear' }}
       />
@@ -35,7 +35,7 @@ function Hero() {
       <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10 flex-grow flex flex-col justify-center py-20">
         <div className="max-w-4xl">
           <motion.p
-            className="font-mono text-[#D40000] uppercase tracking-[0.2em] font-bold text-sm md:text-base mb-6"
+            className="font-mono text-[#0055D4] uppercase tracking-[0.2em] font-bold text-sm md:text-base mb-6"
             initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}
           >
             Precision Engineering
@@ -58,7 +58,7 @@ function Hero() {
             className="flex flex-col sm:flex-row gap-4"
             initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}
           >
-            <Link href="/products" className="inline-block bg-[#D40000] text-white font-bold py-4 px-8 uppercase tracking-wider text-sm hover:bg-[#B30000] transition-colors text-center">
+            <Link href="/products" className="inline-block bg-[#0055D4] text-white font-bold py-4 px-8 uppercase tracking-wider text-sm hover:bg-[#0044B3] transition-colors text-center">
               Explore Products
             </Link>
             <Link href="/get-quote" className="inline-block bg-transparent border-2 border-black text-black font-bold py-4 px-8 uppercase tracking-wider text-sm hover:bg-black hover:text-white transition-colors text-center">
@@ -75,7 +75,7 @@ function Hero() {
       >
         <span className="font-mono text-[10px] tracking-widest uppercase text-gray-400 [writing-mode:vertical-lr]">Scroll</span>
         <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
-          <ArrowDown size={16} className="text-[#D40000]" />
+          <ArrowDown size={16} className="text-[#0055D4]" />
         </motion.div>
       </motion.div>
     </section>
@@ -116,7 +116,7 @@ function StatsSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <div className={`text-4xl md:text-5xl font-extrabold mb-2 ${red ? 'text-[#D40000]' : 'text-black'}`}>
+              <div className={`text-4xl md:text-5xl font-extrabold mb-2 ${red ? 'text-[#0055D4]' : 'text-black'}`}>
                 <span className="counter" data-value={v}>0</span>{suffix}
               </div>
               <div className="font-mono text-xs text-gray-500 uppercase tracking-widest">{label}</div>
@@ -142,7 +142,7 @@ function WhyChooseUs() {
     <section id="why" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <motion.div className="text-center max-w-3xl mx-auto mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-          <p className="font-mono text-[#D40000] uppercase tracking-widest text-sm mb-3">The Elcomech Advantage</p>
+          <p className="font-mono text-[#0055D4] uppercase tracking-widest text-sm mb-3">The Elcomech Advantage</p>
           <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-4">Why Choose Us</h2>
           <p className="text-gray-600 text-lg">We don&apos;t just build products, we engineer confidence.</p>
         </motion.div>
@@ -154,8 +154,8 @@ function WhyChooseUs() {
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className="group p-8 border border-gray-200 bg-white relative hover:-translate-y-1 transition-transform duration-300 overflow-hidden"
             >
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-transparent group-hover:bg-[#D40000] transition-colors duration-300" />
-              <div className="text-gray-400 group-hover:text-[#D40000] transition-colors mb-5">{r.icon}</div>
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-transparent group-hover:bg-[#0055D4] transition-colors duration-300" />
+              <div className="text-gray-400 group-hover:text-[#0055D4] transition-colors mb-5">{r.icon}</div>
               <h3 className="text-lg font-bold text-black mb-3">{r.title}</h3>
               <p className="text-gray-600 text-sm leading-relaxed">{r.desc}</p>
             </motion.div>
@@ -178,7 +178,7 @@ function FeaturedProducts() {
             <p className="text-gray-600 text-lg">Industrial engineering solutions designed for rigorous validation.</p>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <Link href="/products" className="inline-flex items-center gap-2 font-bold text-[#D40000] uppercase tracking-widest text-sm hover:gap-3 transition-all">
+            <Link href="/products" className="inline-flex items-center gap-2 font-bold text-[#0055D4] uppercase tracking-widest text-sm hover:gap-3 transition-all">
               View All Products <ArrowRight size={16} />
             </Link>
           </motion.div>
@@ -200,11 +200,11 @@ function FeaturedProducts() {
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-lg font-bold text-black mb-2">{p.name}</h3>
                 <p className="text-gray-600 text-sm mb-5 flex-grow">{p.shortDesc}</p>
-                <Link href={`/products/${p.id}`} className="inline-flex items-center gap-2 text-sm font-bold text-[#D40000] uppercase tracking-widest group/link">
+                <Link href={`/products/${p.id}`} className="inline-flex items-center gap-2 text-sm font-bold text-[#0055D4] uppercase tracking-widest group/link">
                   View Details <ArrowRight size={14} className="group-hover/link:translate-x-1 transition-transform" />
                 </Link>
               </div>
-              <div className="h-1 bg-transparent group-hover:bg-[#D40000] transition-colors duration-300" />
+              <div className="h-1 bg-transparent group-hover:bg-[#0055D4] transition-colors duration-300" />
             </motion.div>
           ))}
         </div>
@@ -238,9 +238,9 @@ function Industries() {
               key={i}
               initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.05 }}
-              className="bg-[#242424] border border-[#333] p-6 flex flex-col items-center justify-center text-center group hover:border-[#D40000] transition-all duration-300"
+              className="bg-[#242424] border border-[#333] p-6 flex flex-col items-center justify-center text-center group hover:border-[#0055D4] transition-all duration-300"
             >
-              <div className="text-gray-500 group-hover:text-[#D40000] transition-colors mb-3">{item.icon}</div>
+              <div className="text-gray-500 group-hover:text-[#0055D4] transition-colors mb-3">{item.icon}</div>
               <h3 className="font-bold text-sm tracking-wide">{item.name}</h3>
             </motion.div>
           ))}
@@ -261,7 +261,7 @@ const contactSchema = z.object({
 });
 type ContactData = z.infer<typeof contactSchema>;
 
-const inputCls = 'w-full border-2 border-gray-200 px-4 py-3 text-sm font-medium focus:outline-none focus:border-[#D40000] transition-colors rounded-none bg-white';
+const inputCls = 'w-full border-2 border-gray-200 px-4 py-3 text-sm font-medium focus:outline-none focus:border-[#0055D4] transition-colors rounded-none bg-white';
 
 function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -278,11 +278,11 @@ function Contact() {
           {/* Info */}
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-3">Contact Us</h2>
-            <div className="w-16 h-1 bg-[#D40000] mb-6" />
+            <div className="w-16 h-1 bg-[#0055D4] mb-6" />
             <p className="text-gray-600 text-lg mb-10">Request a quote or technical consultation for your engineering requirements.</p>
             <div className="space-y-6">
               <div className="flex gap-4 items-start">
-                <MapPin size={22} className="text-[#D40000] mt-1 shrink-0" />
+                <MapPin size={22} className="text-[#0055D4] mt-1 shrink-0" />
                 <div>
                   <p className="font-bold text-black text-lg">Elcomech Systems</p>
                   <p className="text-gray-600">Bengaluru - 560091, Karnataka, India</p>
@@ -290,11 +290,11 @@ function Contact() {
                 </div>
               </div>
               <div className="flex gap-4 items-center">
-                <Clock size={22} className="text-[#D40000] shrink-0" />
+                <Clock size={22} className="text-[#0055D4] shrink-0" />
                 <p className="text-gray-600">Mon–Sat, 9:00 AM – 6:00 PM IST</p>
               </div>
               <div className="flex gap-4 items-center">
-                <ShieldCheck size={22} className="text-[#D40000] shrink-0" />
+                <ShieldCheck size={22} className="text-[#0055D4] shrink-0" />
                 <p className="text-gray-600">GST Verified · TrustSEAL · Payment Protected</p>
               </div>
             </div>
@@ -305,7 +305,7 @@ function Contact() {
             {submitted ? (
               <div className="bg-white border border-gray-200 p-10 text-center">
                 <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: 'spring', stiffness: 300 }}>
-                  <CheckCircle2 size={56} className="text-[#D40000] mx-auto mb-5" />
+                  <CheckCircle2 size={56} className="text-[#0055D4] mx-auto mb-5" />
                 </motion.div>
                 <h3 className="text-2xl font-bold mb-3">Enquiry Sent!</h3>
                 <p className="text-gray-600">Our team will respond within 1–2 business days.</p>
@@ -316,17 +316,17 @@ function Contact() {
                   <div>
                     <label className="block text-sm font-semibold mb-1">Full Name *</label>
                     <input {...register('name')} className={inputCls} placeholder="Your name" />
-                    {errors.name && <p className="text-[#D40000] text-xs mt-1">{errors.name.message}</p>}
+                    {errors.name && <p className="text-[#0055D4] text-xs mt-1">{errors.name.message}</p>}
                   </div>
                   <div>
                     <label className="block text-sm font-semibold mb-1">Email *</label>
                     <input {...register('email')} type="email" className={inputCls} placeholder="you@company.com" />
-                    {errors.email && <p className="text-[#D40000] text-xs mt-1">{errors.email.message}</p>}
+                    {errors.email && <p className="text-[#0055D4] text-xs mt-1">{errors.email.message}</p>}
                   </div>
                   <div>
                     <label className="block text-sm font-semibold mb-1">Phone *</label>
                     <input {...register('phone')} className={inputCls} placeholder="+91 98765 43210" />
-                    {errors.phone && <p className="text-[#D40000] text-xs mt-1">{errors.phone.message}</p>}
+                    {errors.phone && <p className="text-[#0055D4] text-xs mt-1">{errors.phone.message}</p>}
                   </div>
                   <div>
                     <label className="block text-sm font-semibold mb-1">Company</label>
@@ -343,9 +343,9 @@ function Contact() {
                 <div>
                   <label className="block text-sm font-semibold mb-1">Message *</label>
                   <textarea {...register('message')} rows={4} className={inputCls} placeholder="Describe your requirements…" />
-                  {errors.message && <p className="text-[#D40000] text-xs mt-1">{errors.message.message}</p>}
+                  {errors.message && <p className="text-[#0055D4] text-xs mt-1">{errors.message.message}</p>}
                 </div>
-                <button type="submit" className="w-full bg-[#D40000] text-white font-bold py-4 uppercase tracking-widest text-sm hover:bg-[#B30000] transition-colors">
+                <button type="submit" className="w-full bg-[#0055D4] text-white font-bold py-4 uppercase tracking-widest text-sm hover:bg-[#0044B3] transition-colors">
                   Send Enquiry
                 </button>
               </form>
