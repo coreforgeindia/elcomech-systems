@@ -1,0 +1,5 @@
+# Robots.txt for Elcomech Systems
+User-agent: *
+Allow: /
+
+Sitemap: https://elcomechsystems.com/sitemap.xml
