@@ -194,7 +194,7 @@ function Step4({ onNext, onBack }: { onNext: (d: z.infer<typeof step4Schema>) =>
         <div className="flex gap-4 mt-1">
           {(['yes', 'no'] as const).map((v) => (
             <label key={v} className="flex items-center gap-2 cursor-pointer">
-              <input {...register('wiringNeeded')} type="radio" value={v} className="accent-[#D40000]" />
+              <input {...register('wiringNeeded')} type="radio" value={v} className="accent-[#0055D4]" />
               <span className="font-semibold capitalize">{v}</span>
             </label>
           ))}
@@ -217,7 +217,7 @@ function Step4({ onNext, onBack }: { onNext: (d: z.infer<typeof step4Schema>) =>
             { v: 'others',l: 'Others' },
           ] as const).map(({ v, l }) => (
             <label key={v} className="flex items-center gap-2 cursor-pointer">
-              <input {...register('cableType')} type="radio" value={v} className="accent-[#D40000]" />
+              <input {...register('cableType')} type="radio" value={v} className="accent-[#0055D4]" />
               <span className="font-semibold">{l}</span>
             </label>
           ))}
@@ -243,7 +243,7 @@ function Step5({ onNext, onBack }: { onNext: (d: z.infer<typeof step5Schema>) =>
       <Field label="Fixture Type *" error={errors.fixtureType?.message}>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-1">
           {(['vacuum', 'pneumatic', 'manual', 'rf'] as const).map((v) => (
-            <label key={v} className={`flex items-center justify-center gap-2 border-2 p-3 cursor-pointer rounded transition-colors ${fixtureType === v ? 'border-[#D40000] bg-red-50' : 'border-gray-200 hover:border-gray-400'}`}>
+            <label key={v} className={`flex items-center justify-center gap-2 border-2 p-3 cursor-pointer rounded transition-colors ${fixtureType === v ? 'border-[#0055D4] bg-blue-50' : 'border-gray-200 hover:border-gray-400'}`}>
               <input {...register('fixtureType')} type="radio" value={v} className="sr-only" />
               <span className="font-bold uppercase text-sm">{v}</span>
             </label>
@@ -255,7 +255,7 @@ function Step5({ onNext, onBack }: { onNext: (d: z.infer<typeof step5Schema>) =>
           <div className="flex gap-4 mt-1">
             {([{ v: 'low-cost', l: 'Low-Cost' }, { v: 'standard', l: 'Standard' }] as const).map(({ v, l }) => (
               <label key={v} className="flex items-center gap-2 cursor-pointer">
-                <input {...register('manualType')} type="radio" value={v} className="accent-[#D40000]" />
+                <input {...register('manualType')} type="radio" value={v} className="accent-[#0055D4]" />
                 <span className="font-semibold">{l}</span>
               </label>
             ))}
@@ -266,7 +266,7 @@ function Step5({ onNext, onBack }: { onNext: (d: z.infer<typeof step5Schema>) =>
         <div className="flex gap-4 mt-1">
           {(['yes', 'no'] as const).map((v) => (
             <label key={v} className="flex items-center gap-2 cursor-pointer">
-              <input {...register('interfacePanel')} type="radio" value={v} className="accent-[#D40000]" />
+              <input {...register('interfacePanel')} type="radio" value={v} className="accent-[#0055D4]" />
               <span className="font-semibold capitalize">{v}</span>
             </label>
           ))}
@@ -277,7 +277,7 @@ function Step5({ onNext, onBack }: { onNext: (d: z.infer<typeof step5Schema>) =>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
             {interfaceBlockOptions.map((opt) => (
               <label key={opt} className="flex items-center gap-3 cursor-pointer">
-                <input {...register('interfaceBlocks')} type="checkbox" value={opt} className="accent-[#D40000] w-4 h-4" />
+                <input {...register('interfaceBlocks')} type="checkbox" value={opt} className="accent-[#0055D4] w-4 h-4" />
                 <span className="text-sm">{opt}</span>
               </label>
             ))}
@@ -303,7 +303,7 @@ function Step6({ onNext, onBack }: { onNext: (d: z.infer<typeof step6Schema>) =>
         <div className="flex flex-wrap gap-4 mt-2">
           {extraOptions.map((opt) => (
             <label key={opt} className="flex items-center gap-2 cursor-pointer">
-              <input {...register('extras')} type="checkbox" value={opt} className="accent-[#D40000] w-4 h-4" />
+              <input {...register('extras')} type="checkbox" value={opt} className="accent-[#0055D4] w-4 h-4" />
               <span className="text-sm font-medium">{opt}</span>
             </label>
           ))}
@@ -313,7 +313,7 @@ function Step6({ onNext, onBack }: { onNext: (d: z.infer<typeof step6Schema>) =>
         <div className="flex flex-wrap gap-4 mt-1">
           {(['none', 'top', 'bottom', 'side'] as const).map((v) => (
             <label key={v} className="flex items-center gap-2 cursor-pointer">
-              <input {...register('connectorSide')} type="radio" value={v} className="accent-[#D40000]" />
+              <input {...register('connectorSide')} type="radio" value={v} className="accent-[#0055D4]" />
               <span className="font-semibold capitalize">{v === 'none' ? 'No Connector' : v}</span>
             </label>
           ))}
@@ -324,7 +324,7 @@ function Step6({ onNext, onBack }: { onNext: (d: z.infer<typeof step6Schema>) =>
           <div className="flex gap-4 mt-1">
             {(['manual', 'pneumatic'] as const).map((v) => (
               <label key={v} className="flex items-center gap-2 cursor-pointer">
-                <input {...register('connectorConnect')} type="radio" value={v} className="accent-[#D40000]" />
+                <input {...register('connectorConnect')} type="radio" value={v} className="accent-[#0055D4]" />
                 <span className="font-semibold capitalize">{v === 'manual' ? 'Manually with Fixture' : 'Pneumatic'}</span>
               </label>
             ))}
@@ -343,7 +343,7 @@ function Step6({ onNext, onBack }: { onNext: (d: z.infer<typeof step6Schema>) =>
         <div className="flex gap-4 mt-1">
           {(['yes', 'no'] as const).map((v) => (
             <label key={v} className="flex items-center gap-2 cursor-pointer">
-              <input {...register('multiPanel')} type="radio" value={v} className="accent-[#D40000]" />
+              <input {...register('multiPanel')} type="radio" value={v} className="accent-[#0055D4]" />
               <span className="font-semibold capitalize">{v}</span>
             </label>
           ))}
@@ -393,14 +393,14 @@ function Field({ label, error, children, className }: { label: string; error?: s
     <div className={`flex flex-col gap-1 ${className || ''}`}>
       <label className="text-sm font-semibold text-gray-700">{label}</label>
       {children}
-      {error && <p className="text-xs text-[#D40000]">{error}</p>}
+      {error && <p className="text-xs text-[#0055D4]">{error}</p>}
     </div>
   );
 }
 
 function InfoBox({ children }: { children: React.ReactNode }) {
   return (
-    <div className="bg-gray-50 border-l-4 border-[#D40000] p-4 text-sm text-gray-600 leading-relaxed">
+    <div className="bg-gray-50 border-l-4 border-[#0055D4] p-4 text-sm text-gray-600 leading-relaxed">
       {children}
     </div>
   );
@@ -410,7 +410,7 @@ function RequirementRow({ number, label, sublabel, checked, type, onChange }: {
   number: string; label: string; sublabel: string; checked: boolean; type: 'confirm' | 'upload'; onChange?: (v: boolean) => void;
 }) {
   return (
-    <div className={`flex items-start gap-4 p-4 border rounded transition-colors ${checked ? 'border-[#D40000] bg-red-50' : 'border-gray-200'}`}>
+    <div className={`flex items-start gap-4 p-4 border rounded transition-colors ${checked ? 'border-[#0055D4] bg-blue-50' : 'border-gray-200'}`}>
       <div className="flex-shrink-0 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-bold text-sm">{number}</div>
       <div className="flex-grow">
         <p className="font-semibold text-black">{label}</p>
@@ -421,7 +421,7 @@ function RequirementRow({ number, label, sublabel, checked, type, onChange }: {
           type="button"
           onClick={() => onChange(!checked)}
           className={`flex items-center gap-2 px-4 py-2 text-xs font-bold uppercase border-2 transition-all ${
-            checked ? 'border-[#D40000] bg-[#D40000] text-white' : 'border-gray-300 text-gray-600 hover:border-[#D40000]'
+            checked ? 'border-[#0055D4] bg-[#0055D4] text-white' : 'border-gray-300 text-gray-600 hover:border-[#0055D4]'
           }`}
         >
           {checked ? <CheckCircle2 size={14} /> : <Upload size={14} />}
@@ -440,7 +440,7 @@ function RequirementRow({ number, label, sublabel, checked, type, onChange }: {
 function NextBtn({ label = 'Next Step' }: { label?: string }) {
   return (
     <div className="flex justify-end pt-2">
-      <button type="submit" className="flex items-center gap-2 bg-[#D40000] text-white px-8 py-3 font-bold uppercase tracking-wide text-sm hover:bg-[#B30000] transition-colors">
+      <button type="submit" className="flex items-center gap-2 bg-[#0055D4] text-white px-8 py-3 font-bold uppercase tracking-wide text-sm hover:bg-[#0044B3] transition-colors">
         {label} <ChevronRight size={16} />
       </button>
     </div>
@@ -454,11 +454,11 @@ function NavBtns({ onBack, onNext, finalLabel }: { onBack: () => void; onNext?: 
         <ChevronLeft size={16} /> Back
       </button>
       {onNext ? (
-        <button type="button" onClick={onNext} className="flex items-center gap-2 bg-[#D40000] text-white px-8 py-3 font-bold uppercase tracking-wide text-sm hover:bg-[#B30000] transition-colors">
+        <button type="button" onClick={onNext} className="flex items-center gap-2 bg-[#0055D4] text-white px-8 py-3 font-bold uppercase tracking-wide text-sm hover:bg-[#0044B3] transition-colors">
           {finalLabel || 'Next Step'} <ChevronRight size={16} />
         </button>
       ) : (
-        <button type="submit" className="flex items-center gap-2 bg-[#D40000] text-white px-8 py-3 font-bold uppercase tracking-wide text-sm hover:bg-[#B30000] transition-colors">
+        <button type="submit" className="flex items-center gap-2 bg-[#0055D4] text-white px-8 py-3 font-bold uppercase tracking-wide text-sm hover:bg-[#0044B3] transition-colors">
           Next Step <ChevronRight size={16} />
         </button>
       )}
@@ -466,7 +466,7 @@ function NavBtns({ onBack, onNext, finalLabel }: { onBack: () => void; onNext?: 
   );
 }
 
-const inputCls = 'w-full border-2 border-gray-200 px-4 py-3 text-sm font-medium focus:outline-none focus:border-[#D40000] transition-colors rounded-none bg-white';
+const inputCls = 'w-full border-2 border-gray-200 px-4 py-3 text-sm font-medium focus:outline-none focus:border-[#0055D4] transition-colors rounded-none bg-white';
 
 // ─── Main Wizard Component ────────────────────────────────────────────────────
 
@@ -483,13 +483,13 @@ export default function FixtureWizard({ onClose }: { onClose: () => void }) {
     return (
       <div className="text-center py-12 px-4">
         <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: 'spring', stiffness: 300 }}>
-          <CheckCircle2 size={64} className="text-[#D40000] mx-auto mb-6" />
+          <CheckCircle2 size={64} className="text-[#0055D4] mx-auto mb-6" />
         </motion.div>
         <h3 className="text-2xl font-bold text-black mb-3">Enquiry Submitted!</h3>
         <p className="text-gray-600 mb-2">Thank you, <strong>{formData.step1?.customerName}</strong>.</p>
         <p className="text-gray-600 mb-8">Our engineering team will review your fixture requirements and contact you at <strong>{formData.step1?.email}</strong> within 2 business days.</p>
         <p className="text-sm text-gray-500 mb-8 font-mono">Reference: ELCO-{Date.now().toString(36).toUpperCase()}</p>
-        <button onClick={onClose} className="bg-black text-white px-8 py-3 font-bold uppercase tracking-wide hover:bg-[#D40000] transition-colors">
+        <button onClick={onClose} className="bg-black text-white px-8 py-3 font-bold uppercase tracking-wide hover:bg-[#0055D4] transition-colors">
           Close
         </button>
       </div>
@@ -501,7 +501,7 @@ export default function FixtureWizard({ onClose }: { onClose: () => void }) {
       {/* Header */}
       <div className="flex items-center justify-between border-b border-gray-200 px-6 py-5">
         <div>
-          <p className="text-xs font-mono text-[#D40000] uppercase tracking-widest mb-1">ICT / FCT Fixture Project</p>
+          <p className="text-xs font-mono text-[#0055D4] uppercase tracking-widest mb-1">ICT / FCT Fixture Project</p>
           <h3 className="text-xl font-bold text-black">{stepTitles[step - 1]}</h3>
         </div>
         <button onClick={onClose} className="p-2 text-gray-400 hover:text-black transition-colors" aria-label="Close">
@@ -517,7 +517,7 @@ export default function FixtureWizard({ onClose }: { onClose: () => void }) {
         </div>
         <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
           <motion.div
-            className="h-full bg-[#D40000] rounded-full"
+            className="h-full bg-[#0055D4] rounded-full"
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
             transition={{ duration: 0.4 }}
@@ -530,7 +530,7 @@ export default function FixtureWizard({ onClose }: { onClose: () => void }) {
               key={i}
               className={`flex-shrink-0 flex items-center gap-1 px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wide transition-colors ${
                 i + 1 === step
-                  ? 'bg-[#D40000] text-white'
+                  ? 'bg-[#0055D4] text-white'
                   : i + 1 < step
                   ? 'bg-black text-white'
                   : 'bg-gray-100 text-gray-400'

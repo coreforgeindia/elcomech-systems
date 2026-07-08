@@ -30,7 +30,7 @@ export default function ProductsPage() {
           <div className="absolute inset-0 bg-grid opacity-40 pointer-events-none" />
           <div className="max-w-7xl mx-auto px-4 md:px-8 relative">
             <motion.p
-              className="font-mono text-[#D40000] uppercase tracking-widest text-sm mb-4"
+              className="font-mono text-[#0055D4] uppercase tracking-widest text-sm mb-4"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
             >
               Complete Product Range
@@ -77,7 +77,7 @@ export default function ProductsPage() {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search products…"
-                className="w-full pl-9 pr-4 py-2 border-2 border-gray-200 text-sm focus:outline-none focus:border-[#D40000] transition-colors"
+                className="w-full pl-9 pr-4 py-2 border-2 border-gray-200 text-sm focus:outline-none focus:border-[#0055D4] transition-colors"
               />
             </div>
           </div>
@@ -116,7 +116,7 @@ export default function ProductsPage() {
                           {product.category}
                         </div>
                         {product.hasFixtureWizard && (
-                          <div className="absolute top-4 right-4 z-10 bg-[#D40000] px-2 py-1 text-[10px] font-mono font-bold tracking-widest text-white">
+                          <div className="absolute top-4 right-4 z-10 bg-[#0055D4] px-2 py-1 text-[10px] font-mono font-bold tracking-widest text-white">
                             ICT/FCT
                           </div>
                         )}
@@ -142,7 +142,7 @@ export default function ProductsPage() {
 
                         <Link
                           href={`/products/${product.id}`}
-                          className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-[#D40000] uppercase tracking-widest group/link"
+                          className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-[#0055D4] uppercase tracking-widest group/link"
                         >
                           View Details
                           <ArrowRight size={14} className="group-hover/link:translate-x-1 transition-transform" />
@@ -150,7 +150,7 @@ export default function ProductsPage() {
                       </div>
 
                       {/* Bottom accent */}
-                      <div className="h-1 bg-transparent group-hover:bg-[#D40000] transition-colors duration-300" />
+                      <div className="h-1 bg-transparent group-hover:bg-[#0055D4] transition-colors duration-300" />
                     </motion.div>
                   ))}
                 </motion.div>
@@ -182,7 +182,7 @@ export default function ProductsPage() {
               Every product can be customized to your exact specifications. Contact our engineering team to discuss your requirements.
             </motion.p>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-20px' }} transition={{ delay: 0.1 }}>
-              <Link href="/get-quote" className="inline-block bg-[#D40000] text-white font-bold py-4 px-10 uppercase tracking-widest text-sm hover:bg-[#B30000] transition-colors">
+              <Link href="/get-quote" className="inline-block bg-[#0055D4] text-white font-bold py-4 px-10 uppercase tracking-widest text-sm hover:bg-[#0044B3] transition-colors">
                 Request a Quote
               </Link>
             </motion.div>

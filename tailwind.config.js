@@ -12,8 +12,8 @@ module.exports = {
       },
       colors: {
         red: {
-          600: '#D40000',
-          700: '#B30000',
+          600: '#0055D4', // Changed to blue to match logo
+          700: '#0044B3',
         },
       },
       backgroundImage: {

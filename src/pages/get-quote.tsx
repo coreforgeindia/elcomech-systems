@@ -25,7 +25,7 @@ const quoteSchema = z.object({
 type QuoteData = z.infer<typeof quoteSchema>;
 
 const inputCls =
-  'w-full border-2 border-gray-200 px-4 py-3.5 text-sm font-medium focus:outline-none focus:border-[#D40000] transition-colors rounded-none bg-white placeholder:text-gray-400';
+  'w-full border-2 border-gray-200 px-4 py-3.5 text-sm font-medium focus:outline-none focus:border-[#0055D4] transition-colors rounded-none bg-white placeholder:text-gray-400';
 
 export default function GetQuotePage() {
   const [submitted, setSubmitted] = useState(false);
@@ -64,7 +64,7 @@ export default function GetQuotePage() {
           <div className="absolute inset-0 bg-grid opacity-40 pointer-events-none" />
           <div className="max-w-7xl mx-auto px-4 md:px-8 relative">
             <motion.p
-              className="font-mono text-[#D40000] uppercase tracking-widest text-sm mb-4"
+              className="font-mono text-[#0055D4] uppercase tracking-widest text-sm mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -80,7 +80,7 @@ export default function GetQuotePage() {
               Get A<br />Custom Quote
             </motion.h1>
             <motion.div
-              className="w-24 h-1 bg-[#D40000] mb-8"
+              className="w-24 h-1 bg-[#0055D4] mb-8"
               initial={{ scaleX: 0, originX: 0 }}
               animate={{ scaleX: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -112,7 +112,7 @@ export default function GetQuotePage() {
                 <h2 className="text-3xl font-extrabold text-black mb-3">
                   Contact Information
                 </h2>
-                <div className="w-16 h-1 bg-[#D40000] mb-8" />
+                <div className="w-16 h-1 bg-[#0055D4] mb-8" />
                 <p className="text-gray-600 text-lg mb-10 leading-relaxed">
                   Reach out for technical consultations, product inquiries, or
                   custom engineering requirements. We&apos;re here to help.
@@ -121,8 +121,8 @@ export default function GetQuotePage() {
                 <div className="space-y-8">
                   {/* Address */}
                   <div className="flex gap-4 items-start">
-                    <div className="w-12 h-12 bg-red-50 border border-red-100 flex items-center justify-center flex-shrink-0">
-                      <MapPin size={20} className="text-[#D40000]" />
+                    <div className="w-12 h-12 bg-blue-50 border border-blue-100 flex items-center justify-center flex-shrink-0">
+                      <MapPin size={20} className="text-[#0055D4]" />
                     </div>
                     <div>
                       <p className="font-bold text-black text-lg">
@@ -136,8 +136,8 @@ export default function GetQuotePage() {
 
                   {/* Hours */}
                   <div className="flex gap-4 items-start">
-                    <div className="w-12 h-12 bg-red-50 border border-red-100 flex items-center justify-center flex-shrink-0">
-                      <Clock size={20} className="text-[#D40000]" />
+                    <div className="w-12 h-12 bg-blue-50 border border-blue-100 flex items-center justify-center flex-shrink-0">
+                      <Clock size={20} className="text-[#0055D4]" />
                     </div>
                     <div>
                       <p className="font-bold text-black text-lg">
@@ -151,8 +151,8 @@ export default function GetQuotePage() {
 
                   {/* CEO */}
                   <div className="flex gap-4 items-start">
-                    <div className="w-12 h-12 bg-red-50 border border-red-100 flex items-center justify-center flex-shrink-0">
-                      <Building2 size={20} className="text-[#D40000]" />
+                    <div className="w-12 h-12 bg-blue-50 border border-blue-100 flex items-center justify-center flex-shrink-0">
+                      <Building2 size={20} className="text-[#0055D4]" />
                     </div>
                     <div>
                       <p className="font-bold text-black text-lg">CEO</p>
@@ -162,8 +162,8 @@ export default function GetQuotePage() {
 
                   {/* Certifications */}
                   <div className="flex gap-4 items-start">
-                    <div className="w-12 h-12 bg-red-50 border border-red-100 flex items-center justify-center flex-shrink-0">
-                      <ShieldCheck size={20} className="text-[#D40000]" />
+                    <div className="w-12 h-12 bg-blue-50 border border-blue-100 flex items-center justify-center flex-shrink-0">
+                      <ShieldCheck size={20} className="text-[#0055D4]" />
                     </div>
                     <div>
                       <p className="font-bold text-black text-lg">Verified</p>
@@ -186,7 +186,7 @@ export default function GetQuotePage() {
                       key={stat.label}
                       className="p-4 bg-white border border-gray-200"
                     >
-                      <div className="text-xl font-extrabold text-[#D40000]">
+                      <div className="text-xl font-extrabold text-[#0055D4]">
                         {stat.value}
                       </div>
                       <div className="font-mono text-[10px] text-gray-500 uppercase tracking-widest mt-1">
@@ -213,7 +213,7 @@ export default function GetQuotePage() {
                     >
                       <CheckCircle2
                         size={64}
-                        className="text-[#D40000] mx-auto mb-6"
+                        className="text-[#0055D4] mx-auto mb-6"
                       />
                     </motion.div>
                     <h3 className="text-3xl font-extrabold mb-4">
@@ -226,7 +226,7 @@ export default function GetQuotePage() {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                       <Link
                         href="/products"
-                        className="inline-flex items-center gap-2 bg-[#D40000] text-white font-bold py-4 px-8 uppercase tracking-widest text-sm hover:bg-[#B30000] transition-colors"
+                        className="inline-flex items-center gap-2 bg-[#0055D4] text-white font-bold py-4 px-8 uppercase tracking-widest text-sm hover:bg-[#0044B3] transition-colors"
                       >
                         Browse Products <ArrowRight size={16} />
                       </Link>
@@ -263,7 +263,7 @@ export default function GetQuotePage() {
                           placeholder="Your full name"
                         />
                         {errors.name && (
-                          <p className="text-[#D40000] text-xs mt-1">
+                          <p className="text-[#0055D4] text-xs mt-1">
                             {errors.name.message}
                           </p>
                         )}
@@ -279,7 +279,7 @@ export default function GetQuotePage() {
                           placeholder="you@company.com"
                         />
                         {errors.email && (
-                          <p className="text-[#D40000] text-xs mt-1">
+                          <p className="text-[#0055D4] text-xs mt-1">
                             {errors.email.message}
                           </p>
                         )}
@@ -294,7 +294,7 @@ export default function GetQuotePage() {
                           placeholder="+91 98765 43210"
                         />
                         {errors.phone && (
-                          <p className="text-[#D40000] text-xs mt-1">
+                          <p className="text-[#0055D4] text-xs mt-1">
                             {errors.phone.message}
                           </p>
                         )}
@@ -369,7 +369,7 @@ export default function GetQuotePage() {
                         placeholder="Describe your requirements, specifications, and any custom needs…"
                       />
                       {errors.message && (
-                        <p className="text-[#D40000] text-xs mt-1">
+                        <p className="text-[#0055D4] text-xs mt-1">
                           {errors.message.message}
                         </p>
                       )}
@@ -377,7 +377,7 @@ export default function GetQuotePage() {
 
                     <button
                       type="submit"
-                      className="w-full bg-[#D40000] text-white font-bold py-4 uppercase tracking-widest text-sm hover:bg-[#B30000] transition-colors flex items-center justify-center gap-2"
+                      className="w-full bg-[#0055D4] text-white font-bold py-4 uppercase tracking-widest text-sm hover:bg-[#0044B3] transition-colors flex items-center justify-center gap-2"
                     >
                       <Send size={16} /> Submit Quote Request
                     </button>
@@ -404,7 +404,7 @@ export default function GetQuotePage() {
               <h2 className="text-3xl font-extrabold text-black mb-3">
                 Visit Our Facility
               </h2>
-              <div className="w-16 h-1 bg-[#D40000]" />
+              <div className="w-16 h-1 bg-[#0055D4]" />
             </motion.div>
             <div className="rounded overflow-hidden border border-gray-200">
               <iframe
@@ -438,7 +438,7 @@ export default function GetQuotePage() {
               </p>
               <Link
                 href="/products"
-                className="inline-flex items-center gap-2 bg-[#D40000] text-white font-bold py-4 px-10 uppercase tracking-widest text-sm hover:bg-[#B30000] transition-colors"
+                className="inline-flex items-center gap-2 bg-[#0055D4] text-white font-bold py-4 px-10 uppercase tracking-widest text-sm hover:bg-[#0044B3] transition-colors"
               >
                 View All Products <ArrowRight size={16} />
               </Link>

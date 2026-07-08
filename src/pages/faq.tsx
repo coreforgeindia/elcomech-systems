@@ -114,10 +114,10 @@ function FAQItem({ q, a, isOpen, onToggle }: { q: string; a: string; isOpen: boo
         onClick={onToggle}
         aria-expanded={isOpen}
       >
-        <span className={`text-base font-bold transition-colors leading-snug ${isOpen ? 'text-[#D40000]' : 'text-black group-hover:text-[#D40000]'}`}>
+        <span className={`text-base font-bold transition-colors leading-snug ${isOpen ? 'text-[#0055D4]' : 'text-black group-hover:text-[#0055D4]'}`}>
           {q}
         </span>
-        <span className={`flex-shrink-0 w-7 h-7 border-2 flex items-center justify-center transition-all ${isOpen ? 'border-[#D40000] bg-[#D40000] text-white' : 'border-gray-300 text-gray-500 group-hover:border-[#D40000]'}`}>
+        <span className={`flex-shrink-0 w-7 h-7 border-2 flex items-center justify-center transition-all ${isOpen ? 'border-[#0055D4] bg-[#0055D4] text-white' : 'border-gray-300 text-gray-500 group-hover:border-[#0055D4]'}`}>
           {isOpen ? <Minus size={14} /> : <Plus size={14} />}
         </span>
       </button>
@@ -161,7 +161,7 @@ export default function FAQPage() {
           <div className="absolute inset-0 bg-grid opacity-40 pointer-events-none" />
           <div className="max-w-7xl mx-auto px-4 md:px-8 relative">
             <motion.p
-              className="font-mono text-[#D40000] uppercase tracking-widest text-sm mb-4"
+              className="font-mono text-[#0055D4] uppercase tracking-widest text-sm mb-4"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
             >
               Technical Support
@@ -193,7 +193,7 @@ export default function FAQPage() {
                   id="faq-category"
                   value={activeCategory || ''}
                   onChange={(e) => setActiveCategory(e.target.value || null)}
-                  className="w-full border-2 border-gray-200 bg-white px-4 py-3.5 text-sm font-bold uppercase tracking-widest focus:outline-none focus:border-[#D40000] appearance-none rounded-none cursor-pointer pr-10 text-black font-sans"
+                  className="w-full border-2 border-gray-200 bg-white px-4 py-3.5 text-sm font-bold uppercase tracking-widest focus:outline-none focus:border-[#0055D4] appearance-none rounded-none cursor-pointer pr-10 text-black font-sans"
                 >
                   <option value="">All Topics</option>
                   {faqCategories.map((cat) => (
@@ -230,7 +230,7 @@ export default function FAQPage() {
                       className="flex items-center gap-4 mb-8"
                       initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
                     >
-                      <div className="w-1 h-10 bg-[#D40000]" />
+                      <div className="w-1 h-10 bg-[#0055D4]" />
                       <h2 className="text-2xl font-extrabold text-black">{section.category}</h2>
                       <span className="font-mono text-xs text-gray-400 bg-gray-100 px-2 py-1">
                         {section.faqs.length} questions
@@ -261,13 +261,13 @@ export default function FAQPage() {
         <section className="py-20 bg-gray-50 border-t border-gray-200">
           <div className="max-w-4xl mx-auto px-4 md:px-8 text-center">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-              <MessageCircle size={40} className="text-[#D40000] mx-auto mb-6" />
+              <MessageCircle size={40} className="text-[#0055D4] mx-auto mb-6" />
               <h2 className="text-3xl font-extrabold text-black mb-4">Still Have Questions?</h2>
               <p className="text-gray-600 text-lg mb-8 max-w-xl mx-auto">
                 Our engineering team is ready to answer any technical questions about our products and services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/get-quote" className="inline-flex items-center gap-2 bg-[#D40000] text-white font-bold py-4 px-8 uppercase tracking-widest text-sm hover:bg-[#B30000] transition-colors">
+                <Link href="/get-quote" className="inline-flex items-center gap-2 bg-[#0055D4] text-white font-bold py-4 px-8 uppercase tracking-widest text-sm hover:bg-[#0044B3] transition-colors">
                   Contact Engineering Team <ArrowRight size={16} />
                 </Link>
                 <Link href="/products/pcb-test-system" className="inline-flex items-center gap-2 border-2 border-black text-black font-bold py-4 px-8 uppercase tracking-widest text-sm hover:bg-black hover:text-white transition-colors">

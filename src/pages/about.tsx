@@ -57,7 +57,7 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-grid opacity-40 pointer-events-none" />
           <div className="max-w-7xl mx-auto px-4 md:px-8 relative">
             <motion.p
-              className="font-mono text-[#D40000] uppercase tracking-widest text-sm mb-4"
+              className="font-mono text-[#0055D4] uppercase tracking-widest text-sm mb-4"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
             >
               Our Story
@@ -68,7 +68,7 @@ export default function AboutPage() {
             >
               About<br />Elcomech Systems
             </motion.h1>
-            <motion.div className="w-24 h-1 bg-[#D40000] mb-8" initial={{ scaleX: 0, originX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 0.6, delay: 0.3 }} />
+            <motion.div className="w-24 h-1 bg-[#0055D4] mb-8" initial={{ scaleX: 0, originX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 0.6, delay: 0.3 }} />
             <motion.p
               className="text-xl text-gray-600 max-w-3xl leading-relaxed"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
@@ -89,7 +89,7 @@ export default function AboutPage() {
                 { v: 100, s: '%', label: 'Quality Tested' },
               ].map(({ v, s, label }) => (
                 <motion.div key={label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-                  <div className="text-4xl md:text-5xl font-extrabold text-[#D40000] mb-1">
+                  <div className="text-4xl md:text-5xl font-extrabold text-[#0055D4] mb-1">
                     <AnimatedCounter value={v} suffix={s} />
                   </div>
                   <div className="font-mono text-xs text-gray-400 uppercase tracking-widest">{label}</div>
@@ -104,7 +104,7 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-                <p className="font-mono text-[#D40000] uppercase tracking-widest text-sm mb-4">Who We Are</p>
+                <p className="font-mono text-[#0055D4] uppercase tracking-widest text-sm mb-4">Who We Are</p>
                 <h2 className="text-4xl font-extrabold text-black mb-6">Precision-Built for Industrial Reliability</h2>
                 <p className="text-gray-600 leading-relaxed mb-6 text-lg">
                   We serve as the rigorous validation backbone for the automotive, aerospace, defence, and electronics industries, the company that ensures your electronics survive field conditions, your cables never fail a test, and your RF environment stays clean.
@@ -117,9 +117,9 @@ export default function AboutPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <motion.div
                   initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-                  className="p-8 border-2 border-[#D40000] bg-red-50"
+                  className="p-8 border-2 border-[#0055D4] bg-blue-50"
                 >
-                  <Target size={32} className="text-[#D40000] mb-4" />
+                  <Target size={32} className="text-[#0055D4] mb-4" />
                   <h3 className="text-xl font-bold text-black mb-3">Our Mission</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">To deliver precision-engineered testing and shielding solutions that guarantee absolute reliability in critical industrial applications.</p>
                 </motion.div>
@@ -128,7 +128,7 @@ export default function AboutPage() {
                   transition={{ delay: 0.15 }}
                   className="p-8 border-2 border-black bg-black text-white"
                 >
-                  <Eye size={32} className="text-[#D40000] mb-4" />
+                  <Eye size={32} className="text-[#0055D4] mb-4" />
                   <h3 className="text-xl font-bold mb-3">Our Vision</h3>
                   <p className="text-gray-400 text-sm leading-relaxed">To be the undisputed leader in industrial testing infrastructure, recognized globally for uncompromising quality and engineering excellence.</p>
                 </motion.div>
@@ -142,7 +142,7 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <motion.div className="mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <h2 className="text-4xl font-extrabold text-black mb-3">Our Journey</h2>
-              <div className="w-16 h-1 bg-[#D40000]" />
+              <div className="w-16 h-1 bg-[#0055D4]" />
             </motion.div>
             <div className="relative border-l-2 border-gray-200 ml-6 space-y-12 pb-8">
               {milestones.map((m, i) => (
@@ -152,7 +152,7 @@ export default function AboutPage() {
                   transition={{ delay: i * 0.1 }}
                   className="relative pl-10"
                 >
-                  <div className="absolute -left-[25px] top-0 w-[48px] h-[48px] rounded-full bg-white border-4 border-[#D40000] flex items-center justify-center font-mono font-bold text-[#D40000] text-xs">
+                  <div className="absolute -left-[25px] top-0 w-[48px] h-[48px] rounded-full bg-white border-4 border-[#0055D4] flex items-center justify-center font-mono font-bold text-[#0055D4] text-xs">
                     {m.year}
                   </div>
                   <h3 className="text-xl font-bold text-black mb-2">{m.title}</h3>
@@ -168,7 +168,7 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <motion.div className="mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <h2 className="text-4xl font-extrabold text-black mb-3">Our Engineering Process</h2>
-              <div className="w-16 h-1 bg-[#D40000]" />
+              <div className="w-16 h-1 bg-[#0055D4]" />
             </motion.div>
             {/* Desktop timeline */}
             <div className="hidden lg:block relative mt-20 pb-12">
@@ -181,7 +181,7 @@ export default function AboutPage() {
                     transition={{ delay: i * 0.12 }}
                     className="relative pt-16"
                   >
-                    <div className="absolute top-0 left-0 w-[60px] h-[60px] rounded-full bg-white border-4 border-gray-100 shadow flex items-center justify-center font-mono font-bold text-[#D40000] text-xl hover:border-[#D40000] transition-colors">
+                    <div className="absolute top-0 left-0 w-[60px] h-[60px] rounded-full bg-white border-4 border-gray-100 shadow flex items-center justify-center font-mono font-bold text-[#0055D4] text-xl hover:border-[#0055D4] transition-colors">
                       {step.num}
                     </div>
                     <h3 className="text-base font-bold text-black mb-2 pr-2">{step.title}</h3>
@@ -194,7 +194,7 @@ export default function AboutPage() {
             <div className="lg:hidden relative border-l-2 border-gray-200 ml-6 space-y-12 pb-8 mt-8">
               {process.map((step, i) => (
                 <motion.div key={i} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="relative pl-10">
-                  <div className="absolute -left-[25px] top-0 w-[48px] h-[48px] rounded-full bg-white border-4 border-gray-100 flex items-center justify-center font-mono font-bold text-[#D40000] text-lg">
+                  <div className="absolute -left-[25px] top-0 w-[48px] h-[48px] rounded-full bg-white border-4 border-gray-100 flex items-center justify-center font-mono font-bold text-[#0055D4] text-lg">
                     {step.num}
                   </div>
                   <h3 className="text-xl font-bold text-black mb-2">{step.title}</h3>
@@ -220,8 +220,8 @@ export default function AboutPage() {
                   transition={{ delay: i * 0.08 }}
                   className="group p-8 border border-gray-200 bg-white hover:-translate-y-1 transition-transform duration-300 relative overflow-hidden"
                 >
-                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-transparent group-hover:bg-[#D40000] transition-colors" />
-                  <div className="text-gray-400 group-hover:text-[#D40000] transition-colors mb-5">{v.icon}</div>
+                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-transparent group-hover:bg-[#0055D4] transition-colors" />
+                  <div className="text-gray-400 group-hover:text-[#0055D4] transition-colors mb-5">{v.icon}</div>
                   <h3 className="text-lg font-bold text-black mb-3">{v.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{v.desc}</p>
                 </motion.div>
