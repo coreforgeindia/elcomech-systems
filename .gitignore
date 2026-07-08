@@ -47,3 +47,9 @@ Thumbs.db
 # Replit
 .cache/
 .local/
+
+# Next.js
+.next/
+out/
+build/
+.config/
