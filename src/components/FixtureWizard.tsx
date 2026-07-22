@@ -3,7 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { CheckCircle2, ChevronRight, ChevronLeft, Upload, X } from 'lucide-react';
+import { CheckCircle2, ChevronRight, ChevronLeft, Upload, X, Loader2 } from 'lucide-react';
+import { submitToGoogleScript } from '@/lib/submitForm';
 
 // ─── Step schemas ─────────────────────────────────────────────────────────────
 
@@ -354,7 +355,19 @@ function Step6({ onNext, onBack }: { onNext: (d: z.infer<typeof step6Schema>) =>
   );
 }
 
-function Step7Review({ data, onBack, onSubmit }: { data: Partial<FormData>; onBack: () => void; onSubmit: () => void }) {
+function Step7Review({
+  data,
+  onBack,
+  onSubmit,
+  isSubmitting,
+  submitError,
+}: {
+  data: Partial<FormData>;
+  onBack: () => void;
+  onSubmit: () => void;
+  isSubmitting?: boolean;
+  submitError?: string | null;
+}) {
   const rows: [string, string][] = [
     ['Customer', data.step1?.customerName || '-'],
     ['Project', data.step1?.projectName || '-'],
@@ -372,7 +385,9 @@ function Step7Review({ data, onBack, onSubmit }: { data: Partial<FormData>; onBa
   ];
   return (
     <div className="space-y-6">
-      <InfoBox>Please review your submission details. Our engineering team will contact you within 2 business days to confirm receipt and discuss next steps.</InfoBox>
+      <InfoBox>
+        Please review your submission details. Our engineering team will contact you within 2 business days to confirm receipt and discuss next steps.
+      </InfoBox>
       <div className="border border-gray-200 divide-y divide-gray-100 rounded">
         {rows.map(([k, v]) => (
           <div key={k} className="grid grid-cols-2 px-4 py-3 text-sm">
@@ -381,7 +396,17 @@ function Step7Review({ data, onBack, onSubmit }: { data: Partial<FormData>; onBa
           </div>
         ))}
       </div>
-      <NavBtns onBack={onBack} finalLabel="Submit Enquiry" onNext={onSubmit} />
+      {submitError && (
+        <div className="p-4 bg-red-50 border border-red-200 text-red-700 text-sm font-medium">
+          {submitError}
+        </div>
+      )}
+      <NavBtns
+        onBack={onBack}
+        finalLabel="Submit Enquiry"
+        onNext={onSubmit}
+        isSubmitting={isSubmitting}
+      />
     </div>
   );
 }
@@ -447,19 +472,59 @@ function NextBtn({ label = 'Next Step' }: { label?: string }) {
   );
 }
 
-function NavBtns({ onBack, onNext, finalLabel }: { onBack: () => void; onNext?: () => void; finalLabel?: string }) {
+function NavBtns({
+  onBack,
+  onNext,
+  finalLabel,
+  isSubmitting,
+}: {
+  onBack: () => void;
+  onNext?: () => void;
+  finalLabel?: string;
+  isSubmitting?: boolean;
+}) {
   return (
     <div className="flex justify-between pt-2">
-      <button type="button" onClick={onBack} className="flex items-center gap-2 border-2 border-gray-300 text-gray-700 px-6 py-3 font-bold uppercase tracking-wide text-sm hover:border-black transition-colors">
+      <button
+        type="button"
+        onClick={onBack}
+        disabled={isSubmitting}
+        className="flex items-center gap-2 border-2 border-gray-300 text-gray-700 px-6 py-3 font-bold uppercase tracking-wide text-sm hover:border-black disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+      >
         <ChevronLeft size={16} /> Back
       </button>
       {onNext ? (
-        <button type="button" onClick={onNext} className="flex items-center gap-2 bg-[#0055D4] text-white px-8 py-3 font-bold uppercase tracking-wide text-sm hover:bg-[#0044B3] transition-colors">
-          {finalLabel || 'Next Step'} <ChevronRight size={16} />
+        <button
+          type="button"
+          onClick={onNext}
+          disabled={isSubmitting}
+          className="flex items-center gap-2 bg-[#0055D4] text-white px-8 py-3 font-bold uppercase tracking-wide text-sm hover:bg-[#0044B3] disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
+        >
+          {isSubmitting ? (
+            <>
+              <Loader2 size={16} className="animate-spin" /> Submitting...
+            </>
+          ) : (
+            <>
+              {finalLabel || 'Next Step'} <ChevronRight size={16} />
+            </>
+          )}
         </button>
       ) : (
-        <button type="submit" className="flex items-center gap-2 bg-[#0055D4] text-white px-8 py-3 font-bold uppercase tracking-wide text-sm hover:bg-[#0044B3] transition-colors">
-          Next Step <ChevronRight size={16} />
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="flex items-center gap-2 bg-[#0055D4] text-white px-8 py-3 font-bold uppercase tracking-wide text-sm hover:bg-[#0044B3] disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
+        >
+          {isSubmitting ? (
+            <>
+              <Loader2 size={16} className="animate-spin" /> Submitting...
+            </>
+          ) : (
+            <>
+              Next Step <ChevronRight size={16} />
+            </>
+          )}
         </button>
       )}
     </div>
@@ -474,8 +539,28 @@ export default function FixtureWizard({ onClose }: { onClose: () => void }) {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState<Partial<FormData>>({});
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const save = (chunk: Partial<FormData>) => setFormData((d) => ({ ...d, ...chunk }));
+
+  const handleFinalSubmit = async () => {
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    const result = await submitToGoogleScript({
+      formType: 'ict_fct_project',
+      ...formData,
+    });
+
+    setIsSubmitting(false);
+
+    if (result.success) {
+      setSubmitted(true);
+    } else {
+      setSubmitError(result.message || 'Failed to submit enquiry. Please try again.');
+    }
+  };
 
   const progress = ((step - 1) / (TOTAL_STEPS - 1)) * 100;
 
@@ -592,7 +677,9 @@ export default function FixtureWizard({ onClose }: { onClose: () => void }) {
               <Step7Review
                 data={formData}
                 onBack={() => setStep(6)}
-                onSubmit={() => setSubmitted(true)}
+                onSubmit={handleFinalSubmit}
+                isSubmitting={isSubmitting}
+                submitError={submitError}
               />
             )}
           </motion.div>

@@ -12,6 +12,9 @@ import {
 import Layout from '@/components/Layout';
 import { products } from '@/data/products';
 
+import { submitToGoogleScript } from '@/lib/submitForm';
+import { Loader2 } from 'lucide-react';
+
 const quoteSchema = z.object({
   name: z.string().min(2, 'Name is required'),
   email: z.string().email('Valid email is required'),
@@ -29,6 +32,9 @@ const inputCls =
 
 export default function GetQuotePage() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+
   const {
     register,
     handleSubmit,
@@ -47,7 +53,23 @@ export default function GetQuotePage() {
     },
   });
 
-  const onSubmit = (_: QuoteData) => setSubmitted(true);
+  const onSubmit = async (formData: QuoteData) => {
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    const result = await submitToGoogleScript({
+      formType: 'get_quote',
+      ...formData,
+    });
+
+    setIsSubmitting(false);
+
+    if (result.success) {
+      setSubmitted(true);
+    } else {
+      setSubmitError(result.message || 'Failed to submit request. Please try again.');
+    }
+  };
 
   return (
     <>
@@ -319,7 +341,7 @@ export default function GetQuotePage() {
                         <select {...register('interest')} className={inputCls}>
                           <option value="">Select a product…</option>
                           {products.map((p) => (
-                            <option key={p.id} value={p.id}>
+                            <option key={p.id} value={p.name}>
                               {p.name}
                             </option>
                           ))}
@@ -375,11 +397,26 @@ export default function GetQuotePage() {
                       )}
                     </div>
 
+                    {submitError && (
+                      <div className="p-4 bg-red-50 border border-red-200 text-red-700 text-sm font-medium">
+                        {submitError}
+                      </div>
+                    )}
+
                     <button
                       type="submit"
-                      className="w-full bg-[#0055D4] text-white font-bold py-4 uppercase tracking-widest text-sm hover:bg-[#0044B3] transition-colors flex items-center justify-center gap-2"
+                      disabled={isSubmitting}
+                      className="w-full bg-[#0055D4] text-white font-bold py-4 uppercase tracking-widest text-sm hover:bg-[#0044B3] disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
                     >
-                      <Send size={16} /> Submit Quote Request
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 size={16} className="animate-spin" /> Submitting Request...
+                        </>
+                      ) : (
+                        <>
+                          <Send size={16} /> Submit Quote Request
+                        </>
+                      )}
                     </button>
 
                     <p className="text-xs text-gray-400 text-center font-mono">
