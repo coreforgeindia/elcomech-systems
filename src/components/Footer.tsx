@@ -126,8 +126,19 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="pt-8 border-t border-[#333] flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 font-mono">
+        <div className="pt-8 border-t border-[#333] flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 font-mono text-center md:text-left">
           <p>© {new Date().getFullYear()} Elcomech Systems. All rights reserved.</p>
+          <p>
+            Designed, Developed &amp; Maintained by{' '}
+            <a
+              href="https://coreforgeindia.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#0055D4] hover:underline font-semibold transition-colors"
+            >
+              CoreForge
+            </a>
+          </p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
